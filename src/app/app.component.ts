@@ -18,6 +18,7 @@ count = 0;
 output = [];
 output2 = [];
 temp = "";
+counter = 1;
 cek: boolean = true;
   klikButton(){
     this.c = 1;
@@ -50,15 +51,16 @@ else{
            for(var k = this.d; k >=1; k--){
           this.temp += "*";
           }
-          for(var l = this.e; l >=1; l--){
+          for(var l = 0;l<this.counter;l++){
            this.temp += "o";
            }
-
-          }
-        this.output2.push(this.temp);
+          this.counter++;
+            this.output2.push(this.temp);
       this.count++;
       this.d--;
-      this.e++;
+      this.e--;
+      
+          }
       
     }
 }
