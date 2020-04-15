@@ -1,4 +1,29 @@
 <hello name="{{ name }}"></hello>
 <p>
-  Start editing to see some magic happen :)
+  <input [(ngModel)] = "a" type="number"/>
+<br/><br/>
+   <input [(ngModel)] = "b" type="number"/>
+   <br/><br/>
 </p>
+
+
+   <button (click) = "klikButton(a,b)">uwowowowow</button>
+    {{c}}
+
+     <button (click) = "hapusButton()">clear</button>
+
+<div *ngIf = "this.c%2 == 0">
+  <div *ngFor="let data of output">
+  {{output}}
+  </div>
+
+</div>
+
+<div *ngIf = "this.c%2 != 0">
+  {{output2}}
+
+</div>
+
+ 
+
+
