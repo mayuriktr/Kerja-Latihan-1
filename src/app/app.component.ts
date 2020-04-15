@@ -19,7 +19,7 @@ output = [];
 output2 = [];
 temp = "";
 cek: boolean = true;
-  klikButton( a,  b){
+  klikButton(){
     this.c = 1;
     for(var i = 0; i< this.b ; i++){
       this.c = this.c*this.a;
@@ -41,22 +41,24 @@ else{
           this.temp += "*";
         }
         this.output.push(this.temp);
-      this.count++;
+         this.count++;
       }
     }
     else if((this.c %2)!= 0){
       for(var j = 0; j<this.d;j++){
         this.temp = "";
-  for(var k = this.d; k >=1; k--){
-    this.temp += "*";
-  }
-   for(var l = this.e; l >=1; l--){
-    this.temp += "o";
-  }
+           for(var k = this.d; k >=1; k--){
+          this.temp += "*";
+          }
+          for(var l = this.e; l >=1; l--){
+           this.temp += "o";
+           }
 
-      }
+          }
         this.output2.push(this.temp);
       this.count++;
+      this.d--;
+      this.e++;
       
     }
 }
@@ -64,6 +66,7 @@ else{
 hapusButton(){
  for(var i = 0;i<this.count;i++){
 this.output.pop();
+this.output2.pop();
  }
   this.count = 0;
 }

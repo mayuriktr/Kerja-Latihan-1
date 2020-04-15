@@ -7,21 +7,22 @@
 </p>
 
 
-   <button (click) = "klikButton(a,b)">uwowowowow</button>
+   <button (click) = "klikButton()">uwowowowow</button>
     {{c}}
 
      <button (click) = "hapusButton()">clear</button>
 
 <div *ngIf = "this.c%2 == 0">
-  <div *ngFor="let data of output">
+  <div>
   {{output}}
   </div>
 
 </div>
 
 <div *ngIf = "this.c%2 != 0">
+   <div *ngFor="let data of output2">
   {{output2}}
-
+ </div>
 </div>
 
  
